@@ -56,7 +56,7 @@ $("button.login").click(function() {
 	var password = $("form.login-form input.password").val();
 
 	if (email == '' || password == '') {
-		alert("Не заповнені усі поля!");
+		alert("Please fill login form!");
 	} else {
 		var userLogin = {
 			email : email,
