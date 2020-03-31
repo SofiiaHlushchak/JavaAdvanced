@@ -11,32 +11,34 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import ua.lviv.lgs.domain.Bucket;
-import ua.lviv.lgs.domain.Product;
 import ua.lviv.lgs.service.BucketService;
 import ua.lviv.lgs.service.impl.BucketServiceImpl;
-
 
 @WebServlet("/bucket")
 public class BucketController extends HttpServlet {
  
-/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 private	BucketService bucketService = BucketServiceImpl.getBucketService();
 
-
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String productId = request.getParameter("productId");
 	
 		HttpSession session = request.getSession();
 		Integer userId = (Integer)session.getAttribute("userId");
-		
+		System.out.println(userId);
+		System.out.println(productId);
 		Bucket bucket = new Bucket(userId, Integer.parseInt(productId), new Date());
 		bucketService.create(bucket);
 		
+		
+		response.setContentType("text");
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().write("Success");
+	}
+	
+	
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String bucketId = request.getParameter("bucketId");
+		bucketService.delete(Integer.parseInt(bucketId));
 		
 		response.setContentType("text");
 		response.setCharacterEncoding("UTF-8");

@@ -2,10 +2,14 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 section {
-    padding: 15px 0;
-    position: absolute;;
-    bottom: 0;
-    width:100%;
+  width: 100%;
+	background-color: #263238;
+	padding: 10px 0px 25px 0px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	text-align: center;
     
   
 	

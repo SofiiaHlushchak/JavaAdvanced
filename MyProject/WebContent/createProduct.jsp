@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-<!doctype html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="ISO-8859-1">
+<title>Cabinet</title>
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -19,10 +17,6 @@
 	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
 	integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
 	crossorigin="anonymous">
-
-<link rel="stylesheet" href="css/createProduct.css">
-
-<title>i-store</title>
 </head>
 <body>
 	<h1>Welcome to the cabinet ${userEmail}</h1>
@@ -47,7 +41,7 @@
 						placeholder="enter product price">
 				</div>
 
-				<button class="btn btn-primary createProduct">Submit</button>
+				<button class="createProduct">Submit</button>
 			</form>
 
 		</div>
@@ -55,8 +49,8 @@
 	</div>
 
 
-<jsp:include page="footer.jsp"></jsp:include>
 
+	<jsp:include page="footer.jsp"></jsp:include>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
